@@ -22,7 +22,7 @@ session_start();
     <section class="hero is-success is-fullheight">
         <nav class="navbar navbar-light bg-light">
             <form class="container-fluid justify-content-center">
-                <a href="cadastro.php">
+            <a href="cadastro.php">
                     <button class="btn btn-outline-success me-2" type="button">Cadastra Paciente</button>
                 </a>
                 
@@ -32,29 +32,37 @@ session_start();
                 <a href="prontuario.php">
                     <button class="btn btn-outline-success me-2" type="button">Prontuário</button>
                 </a>
-                </form>
+            </form>
         </nav>
         <div class="hero-body">        
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <h3 class="title has-text-grey">Sistema de Cadastro de Pacientes</h3>
-                    <h3 class="title has-text-grey">Cadastrar Paciente</h3>
+                    <h3 class="title has-text-grey">Ficha do Paciente</h3>
                    <!-- <div class="notification is-success">
                       <p>Cadastro efetuado!</p>
                     </div> -->
                     <div class="box">
                         <form action="cadastrar.php" method="POST">
                             <div class="field">
-                                <div class="control">
-                                    <input name="nome" type="text" class="input is-large" placeholder="Nome do paciente" autofocus>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuPaciente" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Paciente
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuPaciente">
+                                    <li><a class="dropdown-item" href="#">Paciente 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Paciente 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Paciente 3</a></li>
+                                </ul>
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input name="documento" type="text" class="input is-large" placeholder="Documento">
+                                    <input name="resultado" type="text" class="input is-large" placeholder="Resultado do paciente">
                                 </div>
                             </div>
-                            <button type="submit" class="button is-block is-link is-large is-fullwidth">Cadastrar</button>
+
+                            <button type="submit" class="button is-block is-link is-large is-fullwidth">Cadastrar Prontuario</button>
                         </form>
                     </div>
                 </div>
